@@ -3,7 +3,7 @@
   "name": "kastanos-coffee-shop-be",
   "version": "1.0.0",
   "description": "The backend for kastanos coffee shop",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/Faisal-pixel/kastanos-coffee-shop-be#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.7",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   }
 }
