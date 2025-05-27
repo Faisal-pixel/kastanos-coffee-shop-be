@@ -11,7 +11,13 @@ export const getMenuItems = async (req, res) => {
         .status(500)
         .json({ error: "Error fetching menu", message: error.message });
     }
-    return res.status(200).json(data);
+    const nariaConvertedMenuItems = data.map((item) => {
+      return {
+        ...item,
+        price: item.price / 100,
+      };
+    });
+    return res.status(200).json(nariaConvertedMenuItems);
   } catch (error) {
     return res
       .status(500)
